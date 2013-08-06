@@ -1,0 +1,21 @@
+﻿<Window x:Class="Screen_Capture_Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" WindowStyle="None" ResizeMode="CanResizeWithGrip" AllowsTransparency="True" Background="#7FFFFFFF" Topmost="True" BorderThickness="0">
+    <Grid>
+        <Popup MouseDown="notificationPopup_MouseDown" Name="notificationPopup" AllowsTransparency="True" PopupAnimation="Fade" IsOpen="False" StaysOpen="True" Placement="Center">
+            
+                <Canvas Width="250" Height="100" Background="LightGray" Margin="150">
+                <Border BorderThickness="3" CornerRadius="4" BorderBrush="DarkGray" Width="250" Height="100">
+                    <TextBlock Name="notificationPopupText" TextWrapping="Wrap" Foreground="Black" Width="235" Margin="10,7,0,0" FontFamily="Segoe UI">
+                        Test text test text tes t ext estestdslfjsdlfkjdfglkdfg.
+                    </TextBlock>
+                    </Border>
+                </Canvas>
+            
+        </Popup>
+        <Button Content="Record" Height="33" HorizontalAlignment="Left" Margin="12,12,0,0" Name="recordButton" VerticalAlignment="Top" Width="67" OpacityMask="#61000000" Foreground="Black" BorderBrush="#FFA60000" Background="#FFFA0000" Click="recordButton_Click" />
+        <Image Height="350" HorizontalAlignment="Left" Name="displayImage" Stretch="Fill" VerticalAlignment="Top" Width="525" Margin="0,0,0,0" />
+        <Border BorderBrush="Silver" BorderThickness="10" Height="350" HorizontalAlignment="Left" Name="windowBorder" VerticalAlignment="Top" Width="525" CornerRadius="0"></Border>
+    </Grid>
+</Window>
