@@ -97,6 +97,14 @@ namespace Screen_Capture_Tool
             //Show instructions
             notificationPopupText.Text = "Resize, drag, record for up to 6 hours. Escape to stop recording or quit if you're not recording. F1 or button to record.\r\n<Click to Close...>";
             notificationPopup.IsOpen = true;
+
+            //Sync Popup Location to Window
+            this.LocationChanged += delegate(object sender, EventArgs args)
+            {
+                var offset = notificationPopup.HorizontalOffset;
+                notificationPopup.HorizontalOffset = offset + 1;
+                notificationPopup.HorizontalOffset = offset;
+            };
         }
 
         #endregion
